@@ -1,0 +1,30 @@
+{
+  "name": "ef--m6-proyecto-integrador-sprint-1",
+  "version": "1.0.0",
+  "description": "Proyecto: \"KanbanPro\" - Kick-off del Sprint 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niquel665/EF--M6-Proyecto-integrador-Sprint-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/niquel665/EF--M6-Proyecto-integrador-Sprint-1/issues"
+  },
+  "homepage": "https://github.com/niquel665/EF--M6-Proyecto-integrador-Sprint-1#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

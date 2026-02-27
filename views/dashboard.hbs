@@ -1,0 +1,30 @@
+{{#> layout title="Dashboard - KanbanPro"}}
+  <h1>Dashboard</h1>
+
+  {{#each boards}}
+    <section class="board">
+      <h2>{{name}}</h2>
+
+      <div class="lists">
+        {{#each lists}}
+          <div class="list">
+            <h3>{{title}}</h3>
+
+            <ul class="cards">
+              {{#each cards}}
+                <li class="card">{{title}}</li>
+              {{/each}}
+            </ul>
+
+            <form method="POST" action="/nueva-tarjeta" class="new-card">
+              <input type="hidden" name="boardId" value="{{../id}}">
+              <input type="hidden" name="listId" value="{{id}}">
+              <input name="title" placeholder="Nueva tarea..." required>
+              <button type="submit">Agregar</button>
+            </form>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/each}}
+{{/layout}}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/register">Registro</a>
+      <a href="/login">Login</a>
+      <a href="/dashboard">Dashboard</a>
+    </nav>
+
+    <main class="container">
+      {{> @partial-block }}
+    </main>
+  </body>
+</html>
