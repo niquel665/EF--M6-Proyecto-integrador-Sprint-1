@@ -8,18 +8,39 @@
           "id": "todo",
           "title": "Por hacer",
           "cards": [
-            { "id": "c1", "title": "Configurar Express + hbs" }
+            {
+              "id": "c1",
+              "title": "Configurar Express + hbs"
+            },
+            {
+              "id": "c-1772234804582-cc61d7e734c8b",
+              "title": "prueba 1"
+            },
+            {
+              "id": "c-1772234825171-ce9e5f688f0458",
+              "title": "fghfgh"
+            }
           ]
         },
         {
           "id": "doing",
           "title": "En progreso",
-          "cards": []
+          "cards": [
+            {
+              "id": "c-1772234817117-a3b495e899af",
+              "title": "ghgfhfg"
+            }
+          ]
         },
         {
           "id": "done",
           "title": "Hecho",
-          "cards": []
+          "cards": [
+            {
+              "id": "c-1772234832840-ef0951eb48fe8",
+              "title": "fghfghfghfhfhf"
+            }
+          ]
         }
       ]
     }
