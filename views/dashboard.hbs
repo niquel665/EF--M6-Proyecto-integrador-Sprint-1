@@ -5,14 +5,14 @@
     <section class="board">
       <h2>{{name}}</h2>
 
-      <div class="lists">
+      <div class="kanban-grid">
         {{#each lists}}
-          <div class="list">
-            <h3>{{title}}</h3>
+          <div class="kanban-col">
+            <h3 class="kanban-col__title">{{title}}</h3>
 
-            <ul class="cards">
+            <ul class="kanban-cards">
               {{#each cards}}
-                <li class="card">{{title}}</li>
+                <li class="kanban-card">{{title}}</li>
               {{/each}}
             </ul>
 

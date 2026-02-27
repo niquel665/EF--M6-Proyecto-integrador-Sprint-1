@@ -1,4 +1,67 @@
-{{#> layout title="Home - KanbanPro"}}
-  <h1>KanbanPro</h1>
-  <p>Prototipo Sprint 1: UI + navegación + persistencia en archivo JSON.</p>
+{{!-- views/home.hbs --}}
+{{#> layout title="KanbanPro | Organiza tu flujo"}}
+
+<header class="hero">
+  <div class="hero__content">
+    <h1>Bienvenido a <span class="accent">KanbanPro</span></h1>
+    <p class="lead">
+      Gestiona tus tareas con un tablero estilo Kanban.
+      Crea, prioriza y haz seguimiento sin perder el foco.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/login">Iniciar sesión</a>
+      <a class="btn btn--ghost" href="/register">Registrarse</a>
+    </div>
+
+    <p class="hint">Prototipo Sprint 1: navegación + dashboard con persistencia en JSON.</p>
+  </div>
+
+  <div class="hero__panel">
+    <div class="mini-board">
+      <div class="mini-col">
+        <div class="mini-col__title">Por hacer</div>
+        <div class="mini-card">Definir layout base</div>
+        <div class="mini-card">Leer data.json</div>
+      </div>
+      <div class="mini-col">
+        <div class="mini-col__title">En progreso</div>
+        <div class="mini-card">Diseño Home</div>
+      </div>
+      <div class="mini-col">
+        <div class="mini-col__title">Hecho</div>
+        <div class="mini-card">Rutas OK</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <h2 class="section__title">Información de la aplicación</h2>
+  <p class="section__subtitle">
+    KanbanPro te ayuda a visualizar el trabajo, limitar el WIP y mejorar el flujo.
+  </p>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Tableros</h3>
+      <p>Crea tableros por proyecto y organiza tareas por columnas.</p>
+    </article>
+
+    <article class="card">
+      <h3>Colaboración</h3>
+      <p>Comparte el avance del equipo y mantén todo en un solo lugar.</p>
+    </article>
+
+    <article class="card">
+      <h3>Seguimiento</h3>
+      <p>Revisa el estado del trabajo y mantén claridad sobre prioridades.</p>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 KanbanPro. Prototipo académico.</p>
+</footer>
+
 {{/layout}}
