@@ -322,3 +322,88 @@ body{
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Auth pages (Login/Register) ===== */
+
+.auth{
+  min-height: calc(100vh - 72px); /* 72px aprox del nav */
+  display: grid;
+  place-items: center;
+  padding: 26px 18px;
+}
+
+.auth-card{
+  width: min(440px, 100%);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.auth-title{
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.auth-subtitle{
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.auth-form{
+  display: grid;
+  gap: 14px;
+}
+
+.field{
+  display: grid;
+  gap: 6px;
+}
+
+.field label{
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(255,255,255,.82);
+}
+
+.field input{
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  outline: none;
+}
+
+.field input::placeholder{
+  color: rgba(255,255,255,.45);
+}
+
+.field input:focus{
+  border-color: rgba(167,139,250,.55);
+  box-shadow: 0 0 0 3px rgba(124,58,237,.18);
+}
+
+.btn--full{
+  width: 100%;
+}
+
+.auth-footer{
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+  text-align: center;
+}
+
+.auth-footer a{
+  color: rgba(255,255,255,.90);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.22);
+}
+
+.auth-footer a:hover{
+  border-bottom-color: rgba(167,139,250,.6);
+}
