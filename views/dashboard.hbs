@@ -1,27 +1,29 @@
 {{#> layout title="Dashboard - KanbanPro"}}
-  <h1>Dashboard</h1>
+  <h1 class="mb-3">Dashboard</h1>
 
   {{#each boards}}
-    <section class="board">
-      <h2>{{name}}</h2>
+    <section class="mb-4">
+      <h2 class="h4 mb-3">{{name}}</h2>
 
-      <div class="kanban-grid">
+      <div class="row g-3">
         {{#each lists}}
-          <div class="kanban-col">
-            <h3 class="kanban-col__title">{{title}}</h3>
+          <div class="col-12 col-lg-4">
+            <div class="glass p-3 h-100 d-flex flex-column">
+              <h3 class="h6 mb-3 kp-col-title">{{title}}</h3>
 
-            <ul class="kanban-cards">
-              {{#each cards}}
-                <li class="kanban-card">{{title}}</li>
-              {{/each}}
-            </ul>
+              <ul class="list-unstyled d-grid gap-2 flex-grow-1 mb-3">
+                {{#each cards}}
+                  <li class="kp-task">{{title}}</li>
+                {{/each}}
+              </ul>
 
-            <form method="POST" action="/nueva-tarjeta" class="new-card">
-              <input type="hidden" name="boardId" value="{{../id}}">
-              <input type="hidden" name="listId" value="{{id}}">
-              <input name="title" placeholder="Nueva tarea..." required>
-              <button type="submit">Agregar</button>
-            </form>
+              <form method="POST" action="/nueva-tarjeta" class="input-group">
+                <input type="hidden" name="boardId" value="{{../id}}">
+                <input type="hidden" name="listId" value="{{id}}">
+                <input class="form-control glass-input" name="title" placeholder="Nueva tarea..." required>
+                <button class="btn btn-gradient" type="submit">Agregar</button>
+              </form>
+            </div>
           </div>
         {{/each}}
       </div>

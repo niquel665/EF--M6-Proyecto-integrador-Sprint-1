@@ -1,30 +1,29 @@
 {{#> layout title="Registro - KanbanPro"}}
-  <section class="auth">
-    <div class="auth-card">
-      <h1 class="auth-title">Crear cuenta</h1>
-      <p class="auth-subtitle">Regístrate para comenzar a organizar tus tareas.</p>
+  <section class="d-flex justify-content-center py-5">
+    <div class="glass p-4 w-100 auth-card">
+      <h1 class="h3 fw-bold mb-1">Crear cuenta</h1>
+      <p class="text-white-50 mb-4">Regístrate para comenzar.</p>
 
-      <form class="auth-form" action="#" method="POST">
-        <div class="field">
-          <label for="name">Nombre</label>
-          <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+      <form class="d-grid gap-3">
+        <div>
+          <label class="form-label text-white-75">Nombre</label>
+          <input class="form-control glass-input" type="text" placeholder="Tu nombre" required>
         </div>
 
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+        <div>
+          <label class="form-label text-white-75">Email</label>
+          <input class="form-control glass-input" type="email" placeholder="tu@email.com" required>
         </div>
 
-        <div class="field">
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password" placeholder="Crea una contraseña" required />
+        <div>
+          <label class="form-label text-white-75">Password</label>
+          <input class="form-control glass-input" type="password" placeholder="Crea una contraseña" required>
         </div>
 
-        <button class="btn btn--primary btn--full" type="button">Crear cuenta (mock)</button>
+        <button class="btn btn-gradient w-100" type="button">Crear cuenta (mock)</button>
 
-        <p class="auth-footer">
-          ¿Ya tienes cuenta?
-          <a href="/login">Inicia sesión</a>
+        <p class="text-center text-white-50 small mb-0">
+          ¿Ya tienes cuenta? <a class="kp-link" href="/login">Inicia sesión</a>
         </p>
       </form>
     </div>

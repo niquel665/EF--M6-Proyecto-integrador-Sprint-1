@@ -1,25 +1,24 @@
 {{#> layout title="Login - KanbanPro"}}
-  <section class="auth">
-    <div class="auth-card">
-      <h1 class="auth-title">Iniciar sesión</h1>
-      <p class="auth-subtitle">Accede al prototipo de KanbanPro.</p>
+  <section class="d-flex justify-content-center py-5">
+    <div class="glass p-4 w-100 auth-card">
+      <h1 class="h3 fw-bold mb-1">Iniciar sesión</h1>
+      <p class="text-white-50 mb-4">Accede al prototipo de KanbanPro.</p>
 
-      <form class="auth-form" action="#" method="POST">
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+      <form class="d-grid gap-3">
+        <div>
+          <label class="form-label text-white-75">Email</label>
+          <input class="form-control glass-input" type="email" placeholder="tu@email.com" required>
         </div>
 
-        <div class="field">
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password" placeholder="••••••••" required />
+        <div>
+          <label class="form-label text-white-75">Password</label>
+          <input class="form-control glass-input" type="password" placeholder="••••••••" required>
         </div>
 
-        <button class="btn btn--primary btn--full" type="button">Ingresar (mock)</button>
+        <button class="btn btn-gradient w-100" type="button">Ingresar (mock)</button>
 
-        <p class="auth-footer">
-          ¿No tienes cuenta?
-          <a href="/register">Regístrate</a>
+        <p class="text-center text-white-50 small mb-0">
+          ¿No tienes cuenta? <a class="kp-link" href="/register">Regístrate</a>
         </p>
       </form>
     </div>
