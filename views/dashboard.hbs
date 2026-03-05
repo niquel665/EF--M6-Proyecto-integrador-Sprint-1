@@ -1,28 +1,44 @@
 {{#> layout title="Dashboard - KanbanPro"}}
   <h1 class="mb-3">Dashboard</h1>
 
-  {{#each boards}} {{!-- eecorre todos los tableros que vienen desde data.json --}}
+  {{!-- condicional se muestra solo si user.isAdmin es true --}}
+  {{#if user.isAdmin}}
+    <div class="glass p-3 mb-3">
+      <strong>Modo administrador</strong>
+      <span class="text-white text-opacity-75"> — tienes permisos para agregar tareas.</span>
+    </div>
+  {{/if}}
+
+  {{#each boards}} {{!-- bucle principal tableros --}}
     <section class="mb-4">
       <h2 class="h4 mb-3">{{name}}</h2>
 
-      <div class="row g-3"> {{!-- grid bs: 3 columnas en pantallas grandes --}}
-        {{#each lists}}   {{!-- recorre las listas/ columnas de estado --}}
+      <div class="row g-3"> {{!-- columnas --}}
+        {{#each lists}} {{!-- bucle anidado columnas --}}
           <div class="col-12 col-lg-4">
             <div class="glass p-3 h-100 d-flex flex-column">
               <h3 class="h6 mb-3 kp-col-title">{{title}}</h3>
 
               <ul class="list-unstyled d-grid gap-2 flex-grow-1 mb-3">
-                {{#each cards}}
+                {{#each cards}} {{!-- bucle anidadotarjetas --}}
                   <li class="kp-task">{{title}}</li>
                 {{/each}}
               </ul>
 
-              <form method="POST" action="/nueva-tarjeta" class="input-group">
-                <input type="hidden" name="boardId" value="{{../id}}">
-                <input type="hidden" name="listId" value="{{id}}">
-                <input class="form-control glass-input" name="title" placeholder="Nueva tarea..." required>
-                <button class="btn btn-gradient" type="submit">Agregar</button>
-              </form>
+              {{!-- condicional admin/ el form se ve solo para admin --}}
+              {{#if ../../user.isAdmin}}
+                <form method="POST" action="/nueva-tarjeta" class="input-group">
+                  <input type="hidden" name="boardId" value="{{../id}}">
+                  <input type="hidden" name="listId" value="{{id}}">
+                  <input class="form-control glass-input" name="title" placeholder="Nueva tarea..." required>
+                  <button class="btn btn-gradient" type="submit">Agregar</button>
+                </form>
+              {{else}}
+                <div class="text-white text-opacity-50 small">
+                  Solo un administrador puede agregar tareas (demo).
+                </div>
+              {{/if}}
+
             </div>
           </div>
         {{/each}}

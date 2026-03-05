@@ -31,8 +31,11 @@ app.get("/", (req, res) => res.render("home"));
 app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));
 
+
 app.get("/dashboard", (req, res) => {
-  res.render("dashboard", readData());
+  const data = readData();
+  const user = { name: "Demo", isAdmin: true }; // asume que es admin. si pongo false no deja añadir tareas
+  res.render("dashboard", { ...data, user });
 });
 
 app.post("/nueva-tarjeta", (req, res) => {
