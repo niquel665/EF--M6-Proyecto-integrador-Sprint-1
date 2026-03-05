@@ -38,16 +38,16 @@ Permite visualizar un tablero Kanban desde un archivo `data.json` y agregar nuev
 `package.json
 
 ## ▶️ Cómo ejecutar el proyecto
-1) Instalar dependencias:
-2) 
-npm install
+`1) Instalar dependencias:
+   
+`npm install
 
-3) Levantar el servidor:
+`2) Levantar el servidor:
 
-npm run dev
+`npm run dev
 
-3) Abrir en el navegador:
+`3) Abrir en el navegador:
 
-Home: http://localhost:3000/
+`Home: http://localhost:3000/
 
-Dashboard: http://localhost:3000/dashboard
+`Dashboard: http://localhost:3000/dashboard
