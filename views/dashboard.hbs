@@ -1,12 +1,12 @@
 {{#> layout title="Dashboard - KanbanPro"}}
   <h1 class="mb-3">Dashboard</h1>
 
-  {{#each boards}}
+  {{#each boards}} {{!-- eecorre todos los tableros que vienen desde data.json --}}
     <section class="mb-4">
       <h2 class="h4 mb-3">{{name}}</h2>
 
-      <div class="row g-3">
-        {{#each lists}}
+      <div class="row g-3"> {{!-- grid bs: 3 columnas en pantallas grandes --}}
+        {{#each lists}}   {{!-- recorre las listas/ columnas de estado --}}
           <div class="col-12 col-lg-4">
             <div class="glass p-3 h-100 d-flex flex-column">
               <h3 class="h6 mb-3 kp-col-title">{{title}}</h3>

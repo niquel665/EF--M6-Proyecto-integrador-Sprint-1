@@ -18,7 +18,7 @@ hbs.registerPartials(path.join(VIEWS_DIR, "partials"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-// helpers JSON (sync)
+// helper jsooon
 const readData = () => JSON.parse(fs.readFileSync(DATA_PATH, "utf-8"));
 const writeData = (data) =>
   fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf-8");
@@ -26,7 +26,7 @@ const writeData = (data) =>
 const makeCardId = () =>
   `c-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 
-// routes
+// rutas
 app.get("/", (req, res) => res.render("home"));
 app.get("/register", (req, res) => res.render("register"));
 app.get("/login", (req, res) => res.render("login"));

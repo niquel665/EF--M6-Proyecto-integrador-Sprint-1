@@ -27,12 +27,13 @@ body{
 }
 
 .kp-brand{ font-weight:800; letter-spacing:.2px; text-decoration:none; color:var(--text); }
+/* estilo del logo kanbanPro */
 
-.kp-link{ text-decoration:none; color:var(--muted); font-weight:600; }
+.kp-link{ text-decoration:none; color:var(--muted); font-weight:600; } /* links del nav */
 .kp-link:hover{ color:var(--text); }
 
-.glass{
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+.glass{   /* estilo de tarjeta tipo vidrio */
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); 
   border:1px solid var(--border);
   border-radius:18px;
   box-shadow:var(--shadow);
@@ -51,7 +52,7 @@ body{
 }
 .btn-ghost:hover{ border-color:rgba(167,139,250,.5); color:var(--text); }
 
-.glass-input{
+.glass-input{ /* cuando se hace click en el input */
   background:rgba(255,255,255,.05)!important;
   border:1px solid var(--border)!important;
   color:var(--text)!important;
