@@ -24,30 +24,31 @@ Permite visualizar un tablero Kanban desde un archivo `data.json` y agregar nuev
 - Bootstrap (uso híbrido para layout) + CSS propio (tema violeta/glass)
 
 ## 📁 Estructura del proyecto
-`/public
-`styles.css
-`/views
-`home.hbs
-`login.hbs
-`register.hbs
-`dashboard.hbs
-`/partials
-`layout.hbs
-`app.js
-`data.json
-`package.json
+```text
+/public
+  styles.css
+/views
+  home.hbs
+  login.hbs
+  register.hbs
+  dashboard.hbs
+  /partials
+    layout.hbs
+app.js
+data.json
+package.json
 
 ## ▶️ Cómo ejecutar el proyecto
-`1) Instalar dependencias:
+1) Instalar dependencias:
    
 `npm install
 
-`2) Levantar el servidor:
+2) Levantar el servidor:
 
-`npm run dev
+npm run dev
 
-`3) Abrir en el navegador:
+3) Abrir en el navegador:
 
-`Home: http://localhost:3000/
+Home: http://localhost:3000/
 
-`Dashboard: http://localhost:3000/dashboard
+Dashboard: http://localhost:3000/dashboard
