@@ -39,15 +39,14 @@ Permite visualizar un tablero Kanban desde un archivo `data.json` y agregar nuev
 
 ## ▶️ Cómo ejecutar el proyecto
 1) Instalar dependencias:
-```bash
+2) 
 npm install
 
-2)Levantar el servidor:
-```bash
+3) Levantar el servidor:
+
 npm run dev
 
-3)Abrir en el navegador:
-```bash
+3) Abrir en el navegador:
 
 Home: http://localhost:3000/
 
